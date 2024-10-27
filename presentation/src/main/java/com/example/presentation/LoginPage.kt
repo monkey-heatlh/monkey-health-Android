@@ -56,7 +56,7 @@ fun Loginpage(
             modifier = Modifier
                 .width(345.dp)
                 .height(52.dp)
-                .background(color = Color(0xFFE9E9E9), shape = RoundedCornerShape(size = 12.dp)) // 배경색 및 모서리 둥글게
+                .background(color = Color(0xFFE9E9E9), shape = RoundedCornerShape(size = 12.dp))
                 .padding(start = 24.dp, top = 12.dp, end = 24.dp, bottom = 12.dp),
             horizontalArrangement = Arrangement.spacedBy(60.dp),
             verticalAlignment = Alignment.CenterVertically
@@ -77,7 +77,7 @@ fun Loginpage(
                     fontWeight = FontWeight.SemiBold,
                     color = Color(0xFF111111),
                 ),
-                modifier = Modifier.align(Alignment.CenterVertically) // Row 내부에서 중앙 정렬
+                modifier = Modifier.align(Alignment.CenterVertically)
             )
         }
 
