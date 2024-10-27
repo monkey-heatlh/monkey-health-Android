@@ -40,7 +40,6 @@ fun MainPage(
         )
     }
 }
-
 @Preview
 @Composable
 fun PreviewMainpage(){
