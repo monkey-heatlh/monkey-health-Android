@@ -35,7 +35,6 @@ fun MainPage() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top
     ) {
-        // 헤더 부분
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -75,7 +74,7 @@ fun MainPage() {
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color(0xFFEDEDED), shape = RoundedCornerShape(8.dp))
-                .padding(vertical = 16.dp, horizontal = 24.dp)
+                .padding(vertical = 24.dp, horizontal = 24.dp)
         ) {
             Column(horizontalAlignment = Alignment.Start) {
                 Text(
@@ -88,10 +87,10 @@ fun MainPage() {
                     },
                     fontSize = 16.sp
                 )
-                Spacer(modifier = Modifier.height(4.dp))
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(9.dp, Alignment.Start),
-                    verticalAlignment = Alignment.Bottom,
+                Spacer(modifier = Modifier.height(8.dp))
+                Column(
+                    horizontalAlignment = Alignment.Start,
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
                     Text(
                         text = "10월 14일",
@@ -115,7 +114,7 @@ fun MainPage() {
             }
         }
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         Button(
             onClick = { /* TODO: 루틴 설정하기 클릭 */ },
@@ -132,7 +131,7 @@ fun MainPage() {
             )
         }
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(16.dp))
 
         Button(
             onClick = { /* TODO: 맨몸운동 하러가기 클릭 */ },
