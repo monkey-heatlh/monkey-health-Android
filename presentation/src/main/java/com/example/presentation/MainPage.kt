@@ -20,7 +20,6 @@ import com.example.presentation.R
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
@@ -53,7 +52,7 @@ fun MainPage() {
             )
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(18.dp))
 
         Text(
             text = "집에서 편하게\n정확한 자세로!",
@@ -68,13 +67,13 @@ fun MainPage() {
             modifier = Modifier.fillMaxWidth()
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(28.dp))
 
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color(0xFFEDEDED), shape = RoundedCornerShape(8.dp))
-                .padding(vertical = 24.dp, horizontal = 24.dp)
+                .padding(vertical = 30.dp, horizontal = 24.dp)
         ) {
             Column(horizontalAlignment = Alignment.Start) {
                 Text(
