@@ -25,7 +25,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 
 @Composable
-fun MainPage() {
+fun MainPage1() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -150,6 +150,6 @@ fun MainPage() {
 
 @Preview
 @Composable
-fun PreviewMainPage() {
-    MainPage()
+fun PreviewMainPage1() {
+    MainPage1()
 }
