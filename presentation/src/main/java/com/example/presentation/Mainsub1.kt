@@ -2,6 +2,7 @@ import android.widget.Space
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.FlowRowScopeInstance.align
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -49,7 +50,7 @@ fun Mainsub1() {
                     fontWeight = FontWeight.Normal,
                     color = Color.Black
                 )
-             )
+            )
         }
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -70,48 +71,77 @@ fun Mainsub1() {
             verticalArrangement = Arrangement.spacedBy(16.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
-            val options = listOf("가슴", "복근", "등", "하체", "전신")
-            options.forEach { part ->
-                Box(
+            val parts = listOf(
+                Pair(R.drawable.gauth_logo, "가슴"),
+                Pair(R.drawable.gauth_logo, "복근"),
+                Pair(R.drawable.gauth_logo, "등"),
+                Pair(R.drawable.gauth_logo, "하체"),
+                Pair(R.drawable.gauth_logo, "전신")
+            )
+
+            for (row in parts.chunked(2)) {
+                Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(80.dp)
-                        .background(Color(0xFFEDEDED), shape = RoundedCornerShape(8.dp))
-                        .padding(16.dp),
-                    contentAlignment = Alignment.Center
+                        .padding(horizontal = 4.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    Text(
-                        text = part,
-                        style = TextStyle(
-                            fontSize = 20.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color.Black
-
-                        )
-                    )
+                    row.forEach { (image, label) ->
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .aspectRatio(1.2f)
+                                .background(Color.LightGray, shape = RoundedCornerShape(8.dp)),
+                            contentAlignment = Alignment.BottomCenter
+                        ) {
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.SpaceBetween,
+                                modifier = Modifier.fillMaxSize()
+                            ) {
+                                Image(
+                                    painter = painterResource(id = image),
+                                    contentDescription = null,
+                                    contentScale = ContentScale.Crop,
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .weight(3f)
+                                )
+                                Spacer(modifier = Modifier.height(8.dp))
+                                Text(
+                                    text = label,
+                                    style = TextStyle(
+                                        fontSize = 14.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = Color.Black
+                                    ),
+                                    textAlign = TextAlign.Center,
+                                    modifier = Modifier.padding(4.dp)
+                                )
+                            }
+                        }
+                    }
                 }
             }
         }
-        Spacer(modifier = Modifier.weight(1f))
-
-        Button(
-            onClick = { /* TODO: 다음 화면 이동 처리 */ },
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(56.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF9C27B0))
-        ) {
-            Text(
-                text = "다음",
-                style = TextStyle(
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.White
-                )
-            )
-        }
     }
-}
+            Button(
+                onClick = { /* TODO: 다음 클릭 이벤트 */ },
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(16.dp)
+                    .fillMaxWidth()
+                    .height(48.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF902BE9))
+            ) {
+                Text(
+                    text = "다음",
+                    color = Color.White,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 16.sp
+                )
+            }
+        }
 
 @Preview
 @Composable
