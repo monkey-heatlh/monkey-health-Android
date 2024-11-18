@@ -29,7 +29,7 @@
                 .background(Color.White)
                 .padding(horizontal = 16.dp, vertical = 32.dp),
             horizontalAlignment = Alignment.Start,
-            verticalArrangement = Arrangement.SpaceBetween
+            verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Column(
                 horizontalAlignment = Alignment.Start,
@@ -101,8 +101,8 @@
                                             contentDescription = null,
                                             contentScale = ContentScale.Crop,
                                             modifier = Modifier
-                                                .fillMaxWidth()
-                                                .weight(2.5f)
+                                                .fillMaxSize()
+                                                .weight(2f)
                                         )
                                         Text(
                                             text = label,
