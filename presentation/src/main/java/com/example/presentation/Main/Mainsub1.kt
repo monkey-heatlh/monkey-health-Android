@@ -94,14 +94,13 @@
                                 ) {
                                     Column(
                                         horizontalAlignment = Alignment.CenterHorizontally,
-                                        modifier = Modifier.fillMaxSize()
+                                        modifier = Modifier
                                     ) {
                                         Image(
                                             painter = painterResource(id = image),
                                             contentDescription = null,
                                             contentScale = ContentScale.Crop,
                                             modifier = Modifier
-                                                .fillMaxSize()
                                                 .weight(2f)
                                         )
                                         Text(
