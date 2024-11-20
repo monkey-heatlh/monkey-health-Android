@@ -29,11 +29,11 @@
                 .background(Color.White)
                 .padding(horizontal = 16.dp, vertical = 32.dp),
             horizontalAlignment = Alignment.Start,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.SpaceBetween
         ) {
             Column(
                 horizontalAlignment = Alignment.Start,
-                verticalArrangement = Arrangement.Top
+                verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -67,57 +67,51 @@
                     textAlign = TextAlign.Start
                 )
                 Spacer(modifier = Modifier.height(24.dp))
-                Column(
-                    verticalArrangement = Arrangement.spacedBy(16.dp),
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(16.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    val parts = listOf(
-                        Pair(R.drawable.gauth_logo, "가슴"),
-                        Pair(R.drawable.gauth_logo, "복근"),
-                        Pair(R.drawable.gauth_logo, "등"),
-                        Pair(R.drawable.gauth_logo, "하체"),
-                        Pair(R.drawable.gauth_logo, "전신")
-                    )
+                    ExerciseBox(image = R.drawable.gauth_logo, label = "가슴")
+                    ExerciseBox(image = R.drawable.gauth_logo, label = "복근")
+                }
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(16.dp),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    ExerciseBox(image = R.drawable.gauth_logo, label = "등")
+                    ExerciseBox(image = R.drawable.gauth_logo, label = "하체")
+                }
 
-                    for (row in parts.chunked(2)) {
-                        Row(
-                            horizontalArrangement = Arrangement.spacedBy(16.dp),
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            row.forEach { (image, label) ->
-                                Box(
-                                    modifier = Modifier
-                                        .weight(1f)
-                                        .aspectRatio(1f)
-                                        .background(Color.LightGray, RoundedCornerShape(8.dp)),
-                                    contentAlignment = Alignment.BottomCenter
-                                ) {
-                                    Column(
-                                        horizontalAlignment = Alignment.CenterHorizontally,
-                                        modifier = Modifier
-                                    ) {
-                                        Image(
-                                            painter = painterResource(id = image),
-                                            contentDescription = null,
-                                            contentScale = ContentScale.Crop,
-                                            modifier = Modifier
-                                                .weight(2f)
-                                        )
-                                        Text(
-                                            text = label,
-                                            fontSize = 14.sp,
-                                            fontWeight = FontWeight.SemiBold,
-                                            color = Color.Black,
-                                            textAlign = TextAlign.Center,
-                                            modifier = Modifier.padding(4.dp)
-                                        )
-                                    }
-                                }
-                            }
-                        }
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .aspectRatio(2f)
+                        .background(Color.LightGray, RoundedCornerShape(8.dp)),
+                    contentAlignment = Alignment.BottomCenter
+                ) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier.padding(4.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.gauth_logo),
+                            contentDescription = null,
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier
+                                .weight(2f)
+                                .padding(8.dp)
+                        )
+                        Text(
+                            text = "전신",
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = Color.Black,
+                            textAlign = TextAlign.Center,
+                        )
                     }
                 }
             }
+            Spacer(modifier = Modifier.height(16.dp))
             Button(
                 onClick = { /* 다음 클릭 이벤트 */ },
                 modifier = Modifier
@@ -134,6 +128,44 @@
             }
         }
     }
+
+    @Composable
+    fun ExerciseBox(image: Int, label: String) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .aspectRatio(1f)
+                    .background(Color.LightGray)
+            )
+            {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Image(
+                        painter = painterResource(id = image),
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier
+                            .weight(1f)
+                            .padding(8.dp)
+                    )
+                    Text(
+                        text = label,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color.Black,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(4.dp)
+                    )
+                }
+            }
+        }
+    }
+
     @Preview
     @Composable
     fun PreviewMainsub1() {
