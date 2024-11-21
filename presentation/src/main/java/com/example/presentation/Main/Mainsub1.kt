@@ -10,6 +10,7 @@
     import androidx.compose.ui.Modifier
     import androidx.compose.ui.graphics.Color
     import androidx.compose.ui.layout.ContentScale
+    import androidx.compose.ui.modifier.modifierLocalMapOf
     import androidx.compose.ui.res.painterResource
     import androidx.compose.ui.text.font.FontWeight
     import androidx.compose.ui.text.style.TextAlign
@@ -31,7 +32,30 @@
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.SpaceBetween
         ) {
-
+            Column(
+                modifier = Modifier.padding(1.dp)
+            ) {
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.arrow_down),
+                        contentDescription = "뒤로가기 이미지",
+                        contentScale = ContentScale.FillBounds,
+                        modifier = Modifier.size(48.dp)
+                    )
+                    Text(
+                        text = "뒤로",
+                        style = TextStyle(
+                            fontSize = 14.sp,
+                            fontFamily = FontFamily(Font(R.font.pretendard_regular)),
+                            fontWeight = FontWeight(400),
+                            color = Color(0xFF000000),
+                        )
+                    )
+                }
+            }
         }
     }
     @Preview
