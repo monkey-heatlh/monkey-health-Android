@@ -56,13 +56,14 @@
                 verticalArrangement = Arrangement.Top,
             ) {
                 Text(
-                    text = "무슨 운동을 배워볼까요?",
+                    text = "무슨 운동을 배워볼까요?\n(눌러서 선택)",
                     style = TextStyle(
                         fontSize = 30.sp,
                         lineHeight = 42.sp,
                         fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
                         fontWeight = FontWeight(600),
                         color = Color(0xFF111111),
+                        textAlign = TextAlign.Center,
                     )
                 )
             }
