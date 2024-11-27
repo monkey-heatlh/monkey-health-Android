@@ -1,6 +1,7 @@
     import androidx.compose.foundation.Image
     import androidx.compose.foundation.background
     import androidx.compose.foundation.layout.*
+    import androidx.compose.foundation.shape.RoundedCornerShape
     import androidx.compose.material3.Text
     import androidx.compose.runtime.Composable
     import androidx.compose.ui.Alignment
@@ -39,6 +40,7 @@
                     modifier = Modifier.size(48.dp)
                 )
                 Spacer(modifier = Modifier.height(8.dp))
+
                 Text(
                     text = "뒤로",
                     style = TextStyle(
@@ -64,8 +66,157 @@
                         fontWeight = FontWeight(600),
                         color = Color(0xFF111111),
                         textAlign = TextAlign.Center,
-                    )
+                    ),
+                    modifier = Modifier.padding(bottom = 24.dp)
                 )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(16.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(16.dp),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .width(161.dp)
+                                .height(116.dp)
+                                .background(
+                                    color = Color(0x99111111),
+                                    shape = RoundedCornerShape(12.dp)
+                                ),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "가슴",
+                                style = TextStyle(
+                                        fontSize = 22.sp,
+                                        lineHeight = 22.sp,
+                                        fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                                        fontWeight = FontWeight(600),
+                                        color = Color(0xFFFFFFFF),
+                                )
+                            )
+                        }
+                        Box(
+                            modifier = Modifier
+                                .width(161.dp)
+                                .height(116.dp)
+                                .background(
+                                    color = Color(0x99111111),
+                                    shape = RoundedCornerShape(12.dp)
+                                ),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "복근",
+                                style = TextStyle(
+                                    fontSize = 22.sp,
+                                    lineHeight = 22.sp,
+                                    fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                                    fontWeight = FontWeight(600),
+                                    color = Color(0xFFFFFFFF),
+                                )
+                            )
+                        }
+                    }
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(16.dp),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .width(161.dp)
+                                .height(116.dp)
+                                .background(
+                                    color = Color(0x99111111),
+                                    shape = RoundedCornerShape(12.dp)
+                                ),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "등",
+                                style = TextStyle(
+                                    fontSize = 22.sp,
+                                    lineHeight = 22.sp,
+                                    fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                                    fontWeight = FontWeight(600),
+                                    color = Color(0xFFFFFFFF),
+                                )
+                            )
+                        }
+
+                        Box(
+                            modifier = Modifier
+                                .width(161.dp)
+                                .height(116.dp)
+                                .background(
+                                    color = Color(0x99111111),
+                                    shape = RoundedCornerShape(12.dp)
+                                ),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "하체",
+                                style = TextStyle(
+                                    fontSize = 22.sp,
+                                    lineHeight = 22.sp,
+                                    fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                                    fontWeight = FontWeight(600),
+                                    color = Color(0xFFFFFFFF),
+                                )
+                            )
+                        }
+                    }
+                    Row(
+                        horizontalArrangement = Arrangement.Start,
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .width(161.dp)
+                                .height(116.dp)
+                                .background(
+                                    color = Color(0x99111111),
+                                    shape = RoundedCornerShape(12.dp)
+                                ),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "전신",
+                                style = TextStyle(
+                                    fontSize = 22.sp,
+                                    lineHeight = 22.sp,
+                                    fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                                    fontWeight = FontWeight(600),
+                                    color = Color(0xFFFFFFFF),
+                                )
+                            )
+                        }
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(80.dp))
+
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(50.dp)
+                        .background(color = Color(0xFF690ED4), shape = RoundedCornerShape(8.dp)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "다음",
+                        style = TextStyle(
+                            fontSize = 16.sp,
+                            fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                            fontWeight = FontWeight(600),
+                            color = Color(0xFFC5C5C5),
+                        )
+                    )
+                }
             }
         }
     }
