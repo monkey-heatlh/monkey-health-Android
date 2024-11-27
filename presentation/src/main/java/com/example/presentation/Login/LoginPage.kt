@@ -50,39 +50,6 @@ fun Loginpage(
             ),
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
-
-        Spacer(modifier = Modifier.weight(1f))
-
-        Row(
-            modifier = Modifier
-                .width(345.dp)
-                .height(52.dp)
-                .background(color = Color(0xFFE9E9E9), shape = RoundedCornerShape(size = 12.dp))
-                .padding(start = 24.dp, top = 12.dp, end = 24.dp, bottom = 12.dp),
-            horizontalArrangement = Arrangement.spacedBy(60.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.gauth_logo),
-                contentDescription = "Gauth Logo",
-                modifier = Modifier
-                    .height(40.dp)
-                    .width(40.dp)
-            )
-
-            Text(
-                text = "Gauth로 로그인",
-                style = TextStyle(
-                    fontSize = 16.sp,
-                    fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
-                    fontWeight = FontWeight.SemiBold,
-                    color = Color(0xFF111111),
-                ),
-                modifier = Modifier.align(Alignment.CenterVertically)
-            )
-        }
-
-        Spacer(modifier = Modifier.height(70.dp))
     }
 }
 
