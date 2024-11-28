@@ -37,7 +37,6 @@ fun LoginPage(
             .background(Color.White)
             .padding(horizontal = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.SpaceBetween
     ) {
         Spacer(modifier = Modifier.weight(1f))
 
@@ -57,7 +56,7 @@ fun LoginPage(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(bottom = 64.dp),
+                .padding(bottom = 50.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Button(
@@ -68,9 +67,8 @@ fun LoginPage(
                 shape = RoundedCornerShape(50),
                 modifier = Modifier
                     .width(345.dp)
-                    .height(51.dp)
-                    .padding(bottom = 60.dp)
-                    .border(1.dp, Color(0xFF902BE9), RoundedCornerShape(50))
+                    .padding(vertical = 8.dp)
+                    .border(2.dp, Color(0xFF902BE9), RoundedCornerShape(size = 12.dp))
             ) {
                 Text(
                     text = "회원가입",
@@ -85,11 +83,10 @@ fun LoginPage(
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0xFF902BE9)
                 ),
-                shape = RoundedCornerShape(50),
+                shape = RoundedCornerShape(size = 12.dp),
                 modifier = Modifier
                     .width(345.dp)
-                    .height(51.dp)
-
+                    .padding(vertical = 8.dp)
             ) {
                 Text(
                     text = "로그인",
