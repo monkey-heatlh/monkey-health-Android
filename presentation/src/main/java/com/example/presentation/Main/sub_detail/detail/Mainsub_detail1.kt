@@ -58,6 +58,22 @@ fun Mainsub_detail1() {
                 )
             )
         }
+        Spacer(modifier = Modifier.height(20.dp))
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.Start,
+            verticalArrangement = Arrangement.Top,
+        ) {
+            Text(
+                text = "PUSH UP",
+                style = TextStyle(
+                    fontSize = 28.sp,
+                    fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                    fontWeight = FontWeight(600),
+                    color = Color(0xFF000000),
+                )
+            )
+        }
     }
 }
 @Preview
