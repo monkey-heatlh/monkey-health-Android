@@ -74,7 +74,7 @@ fun Mainsub_detail1() {
             text = "운동시 대흉근, 삼두근, 전면/측면삼각근\n복근, 전거근, 광배근 등의 근육군이 쓰인다.",
             style = TextStyle(
                 fontSize = 14.sp,
-                fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                fontFamily = FontFamily(Font(R.font.pretendard_regular)),
                 fontWeight = FontWeight(400),
                 color = Color(0xFF000000),
             )
