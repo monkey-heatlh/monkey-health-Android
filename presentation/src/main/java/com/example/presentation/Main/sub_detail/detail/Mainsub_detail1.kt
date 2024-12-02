@@ -34,7 +34,7 @@ fun Mainsub_detail1() {
             .fillMaxSize()
             .background(Color.White)
             .padding(horizontal = 16.dp, vertical = 32.dp),
-        horizontalAlignment = Alignment.Start,
+        horizontalAlignment =  Alignment.Start,
         verticalArrangement = Arrangement.Top
     ) {
         Row(
@@ -80,7 +80,12 @@ fun Mainsub_detail1() {
             )
         )
     }
-}
+        Image(
+            painter = painterResource(id = R.drawable.rectangle_8),
+            contentDescription = "image description",
+            contentScale = ContentScale.FillBounds
+        )
+    }
 @Preview
 @Composable
 fun PreviewMainsub_detail() {
