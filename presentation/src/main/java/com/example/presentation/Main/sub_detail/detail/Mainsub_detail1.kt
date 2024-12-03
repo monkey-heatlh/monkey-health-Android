@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -62,6 +63,7 @@ fun Mainsub_detail1() {
             )
         }
         Spacer(modifier = Modifier.height(20.dp))
+
         Text(
             text = "PUSH UP",
             style = TextStyle(
@@ -72,6 +74,7 @@ fun Mainsub_detail1() {
             )
         )
         Spacer(modifier = Modifier.height(20.dp))
+
         Text(
             text = "운동시 대흉근, 삼두근, 전면/측면삼각근\n복근, 전거근, 광배근 등의 근육군이 쓰인다.",
             style = TextStyle(
@@ -81,17 +84,23 @@ fun Mainsub_detail1() {
                 color = Color(0xFF000000),
             )
         )
-    }
+    Spacer(modifier = Modifier.height(20.dp))
+
     Box(modifier = Modifier
         .width(345.dp)
         .height(372.dp)
-        .padding(horizontal = 16.dp, vertical = 32.dp)
+        .fillMaxWidth(),
+        contentAlignment = Alignment.Center
     ) {
         Image(
             painter = painterResource(id = R.drawable.rectangle_8),
             contentDescription = "image description",
-            contentScale = ContentScale.FillBounds
-        )
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(400.dp)
+            )
+        }
     }
 }
 @Preview
