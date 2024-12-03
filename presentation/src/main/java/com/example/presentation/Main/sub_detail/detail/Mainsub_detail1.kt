@@ -1,5 +1,6 @@
 package com.example.presentation.Main.sub_detail.detail
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -13,6 +14,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -87,8 +90,6 @@ fun Mainsub_detail1() {
     Spacer(modifier = Modifier.height(20.dp))
 
     Box(modifier = Modifier
-        .width(345.dp)
-        .height(372.dp)
         .fillMaxWidth(),
         contentAlignment = Alignment.Center
     ) {
@@ -97,9 +98,47 @@ fun Mainsub_detail1() {
             contentDescription = "image description",
             contentScale = ContentScale.Crop,
             modifier = Modifier
-                .fillMaxWidth()
-                .height(400.dp)
+                .width(345.dp)
+                .height(372.dp)
             )
+        }
+    }
+    Spacer(modifier = Modifier.height(20.dp))
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Button(
+            onClick = { /* 다른 운동 */ },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color.White,
+                contentColor = Color(0xFF6200EE),
+                disabledContainerColor = Color(0xFFEDEDED)
+            ),
+            border = BorderStroke(1.dp, Color(0xFF6200EE))
+        ) {
+            Text(text = "다른 운동", fontSize = 16.sp, fontWeight = FontWeight.Bold)
+        }
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        Button(
+            onClick = { /* 바로 시작 */ },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFF6200EE),
+                contentColor = Color.White
+            )
+        ) {
+            Text(text = "바로 시작", fontSize = 16.sp, fontWeight = FontWeight.Bold)
         }
     }
 }
