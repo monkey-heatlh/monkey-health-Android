@@ -3,6 +3,7 @@ package com.example.presentation.Main.sub_detail.detail
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -16,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -34,7 +36,7 @@ fun Mainsub_detail1() {
             .fillMaxSize()
             .background(Color.White)
             .padding(horizontal = 16.dp, vertical = 32.dp),
-        horizontalAlignment =  Alignment.Start,
+        horizontalAlignment = Alignment.Start,
         verticalArrangement = Arrangement.Top
     ) {
         Row(
@@ -80,12 +82,18 @@ fun Mainsub_detail1() {
             )
         )
     }
+    Box(modifier = Modifier
+        .width(345.dp)
+        .height(372.dp)
+        .padding(horizontal = 16.dp, vertical = 32.dp)
+    ) {
         Image(
             painter = painterResource(id = R.drawable.rectangle_8),
             contentDescription = "image description",
             contentScale = ContentScale.FillBounds
         )
     }
+}
 @Preview
 @Composable
 fun PreviewMainsub_detail() {
