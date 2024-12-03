@@ -41,7 +41,6 @@ fun Mainsub_detail2() {
             .background(Color.White)
             .padding(horizontal = 16.dp, vertical = 32.dp)
     ) {
-        // 상단 콘텐츠 (위쪽에 배치)
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -74,7 +73,7 @@ fun Mainsub_detail2() {
             Spacer(modifier = Modifier.height(20.dp))
 
             Text(
-                text = "PUSH UP",
+                text = "FLANK",
                 style = TextStyle(
                     fontSize = 28.sp,
                     fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
@@ -85,7 +84,9 @@ fun Mainsub_detail2() {
             Spacer(modifier = Modifier.height(20.dp))
 
             Text(
-                text = "운동시 대흉근, 삼두근, 전면/측면삼각근\n복근, 전거근, 광배근 등의 근육군이 쓰인다.",
+                text = "등척성 코어 근육 운동으로 근지구렬 향상에 도움을 주며\n" +
+                        "늑골, 척추, 골반을 연결하고 몸을 바로세우는 \n" +
+                        "근육을 단련하여 자세 교정에 도움을 준다.",
                 style = TextStyle(
                     fontSize = 14.sp,
                     fontFamily = FontFamily(Font(R.font.pretendard_regular)),
@@ -97,7 +98,7 @@ fun Mainsub_detail2() {
 
             Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                 Image(
-                    painter = painterResource(id = R.drawable.rectangle_8),
+                    painter = painterResource(id = R.drawable.rectangle_9),
                     contentDescription = "image description",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
@@ -106,12 +107,10 @@ fun Mainsub_detail2() {
                 )
             }
         }
-
-        // 하단 버튼 배치
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .align(Alignment.BottomCenter) // 하단에 정렬
+                .align(Alignment.BottomCenter)
                 .padding(bottom = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
