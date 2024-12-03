@@ -35,28 +35,57 @@ import com.example.presentation.R
 
 @Composable
 fun Mainsub_detail1() {
-    Column(
+    Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
-            .padding(horizontal = 16.dp, vertical = 32.dp),
-        horizontalAlignment = Alignment.Start,
-        verticalArrangement = Arrangement.Top
+            .padding(horizontal = 16.dp, vertical = 32.dp)
     ) {
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
-            verticalAlignment = Alignment.CenterVertically,
+        // 상단 콘텐츠 (위쪽에 배치)
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 32.dp),
+            horizontalAlignment = Alignment.Start,
+            verticalArrangement = Arrangement.Top
         ) {
-            Image(
-                painter = painterResource(id = R.drawable.arrow_down),
-                contentDescription = "뒤로가기 이미지",
-                contentScale = ContentScale.FillBounds,
-                modifier = Modifier.size(48.dp)
-            )
-            Spacer(modifier = Modifier.width(8.dp))
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.arrow_down),
+                    contentDescription = "뒤로가기 이미지",
+                    contentScale = ContentScale.FillBounds,
+                    modifier = Modifier.size(48.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+
+                Text(
+                    text = "뒤로",
+                    style = TextStyle(
+                        fontSize = 14.sp,
+                        fontFamily = FontFamily(Font(R.font.pretendard_regular)),
+                        fontWeight = FontWeight(400),
+                        color = Color(0xFF000000),
+                    )
+                )
+            }
+            Spacer(modifier = Modifier.height(20.dp))
 
             Text(
-                text = "뒤로",
+                text = "PUSH UP",
+                style = TextStyle(
+                    fontSize = 28.sp,
+                    fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                    fontWeight = FontWeight(600),
+                    color = Color(0xFF000000),
+                )
+            )
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Text(
+                text = "운동시 대흉근, 삼두근, 전면/측면삼각근\n복근, 전거근, 광배근 등의 근육군이 쓰인다.",
                 style = TextStyle(
                     fontSize = 14.sp,
                     fontFamily = FontFamily(Font(R.font.pretendard_regular)),
@@ -64,84 +93,60 @@ fun Mainsub_detail1() {
                     color = Color(0xFF000000),
                 )
             )
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+                Image(
+                    painter = painterResource(id = R.drawable.rectangle_8),
+                    contentDescription = "image description",
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .width(345.dp)
+                        .height(372.dp)
+                )
+            }
         }
-        Spacer(modifier = Modifier.height(20.dp))
 
-        Text(
-            text = "PUSH UP",
-            style = TextStyle(
-                fontSize = 28.sp,
-                fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
-                fontWeight = FontWeight(600),
-                color = Color(0xFF000000),
-            )
-        )
-        Spacer(modifier = Modifier.height(20.dp))
-
-        Text(
-            text = "운동시 대흉근, 삼두근, 전면/측면삼각근\n복근, 전거근, 광배근 등의 근육군이 쓰인다.",
-            style = TextStyle(
-                fontSize = 14.sp,
-                fontFamily = FontFamily(Font(R.font.pretendard_regular)),
-                fontWeight = FontWeight(400),
-                color = Color(0xFF000000),
-            )
-        )
-    Spacer(modifier = Modifier.height(20.dp))
-
-    Box(modifier = Modifier
-        .fillMaxWidth(),
-        contentAlignment = Alignment.Center
-    ) {
-        Image(
-            painter = painterResource(id = R.drawable.rectangle_8),
-            contentDescription = "image description",
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .width(345.dp)
-                .height(372.dp)
-            )
-        }
-    }
-    Spacer(modifier = Modifier.height(20.dp))
-
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(bottom = 16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Button(
-            onClick = { /* 다른 운동 */ },
+        // 하단 버튼 배치
+        Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(56.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color.White,
-                contentColor = Color(0xFF6200EE),
-                disabledContainerColor = Color(0xFFEDEDED)
-            ),
-            border = BorderStroke(1.dp, Color(0xFF6200EE))
+                .align(Alignment.BottomCenter) // 하단에 정렬
+                .padding(bottom = 16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = "다른 운동", fontSize = 16.sp, fontWeight = FontWeight.Bold)
-        }
+            Button(
+                onClick = { /* 다른 운동 */ },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(56.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.White,
+                    contentColor = Color(0xFF6200EE),
+                ),
+                border = BorderStroke(1.dp, Color(0xFF6200EE))
+            ) {
+                Text(text = "다른 운동", fontSize = 16.sp, fontWeight = FontWeight.Bold)
+            }
 
-        Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
-        Button(
-            onClick = { /* 바로 시작 */ },
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(56.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFF6200EE),
-                contentColor = Color.White
-            )
-        ) {
-            Text(text = "바로 시작", fontSize = 16.sp, fontWeight = FontWeight.Bold)
+            Button(
+                onClick = { /* 바로 시작 */ },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(56.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF6200EE),
+                    contentColor = Color.White
+                )
+            ) {
+                Text(text = "바로 시작", fontSize = 16.sp, fontWeight = FontWeight.Bold)
+            }
         }
     }
 }
+
 @Preview
 @Composable
 fun PreviewMainsub_detail() {
