@@ -41,7 +41,6 @@ fun Mainsub_detail1() {
             .background(Color.White)
             .padding(horizontal = 16.dp, vertical = 32.dp)
     ) {
-        // 상단 콘텐츠 (위쪽에 배치)
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -106,12 +105,10 @@ fun Mainsub_detail1() {
                 )
             }
         }
-
-        // 하단 버튼 배치
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .align(Alignment.BottomCenter) // 하단에 정렬
+                .align(Alignment.BottomCenter)
                 .padding(bottom = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
