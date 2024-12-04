@@ -33,9 +33,11 @@ import androidx.compose.ui.unit.sp
 import com.example.presentation.R
 
 @Composable
-fun Mainsub_detail1() {
+fun Mainsub_detail1(
+    modifier: Modifier = Modifier
+) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.White)
             .padding(horizontal = 16.dp, vertical = 32.dp)
