@@ -25,9 +25,11 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 
 @Composable
-fun MainPage1() {
+fun MainPage1(
+    modifier: Modifier = Modifier
+) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.White)
             .padding(horizontal = 16.dp, vertical = 32.dp),
