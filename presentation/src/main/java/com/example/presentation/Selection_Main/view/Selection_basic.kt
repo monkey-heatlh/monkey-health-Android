@@ -1,4 +1,4 @@
-package com.example.presentation.Selection_Main
+package com.example.presentation.Selection_Main.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
