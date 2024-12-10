@@ -30,7 +30,7 @@ fun SignUp1(
             .padding(horizontal = 16.dp, vertical = 32.dp),
         horizontalAlignment = Alignment.Start,
         verticalArrangement = Arrangement.Top
-){
+) {
 
     }
 }
