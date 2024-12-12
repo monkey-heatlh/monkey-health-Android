@@ -25,8 +25,6 @@ import com.example.presentation.R
 fun SignUp1(
     modifier: Modifier = Modifier
 ) {
-    val email = remember { mutableStateOf("") }
-
     Column(
         modifier = modifier
             .fillMaxSize()
