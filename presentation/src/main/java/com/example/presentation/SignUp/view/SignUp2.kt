@@ -26,7 +26,7 @@ fun SignUp2(
         modifier = modifier
             .fillMaxSize()
             .background(Color.White)
-            .padding(horizontal = 20.dp, vertical = 24.dp),
+            .padding(horizontal = 24.dp, vertical = 41.dp),
         horizontalAlignment = Alignment.Start,
         verticalArrangement = Arrangement.Top
     ) {
