@@ -150,8 +150,12 @@ fun SignUp3(
             onClick = { /* 인증번호 받기 클릭 이벤트 */ },
             modifier = Modifier
                 .width(345.dp)
-                .height(54.dp)
-                .background(color = Color(0xFF690ED4), shape = RoundedCornerShape(size = 8.dp))
+                .height(54.dp),
+            shape = RoundedCornerShape(size = 8.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFF690ED4),
+                contentColor = Color.White
+            )
         ) {
             Text(
                 text = "동의하고 시작하기",
