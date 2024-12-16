@@ -41,7 +41,7 @@ fun MainSub1(
                 contentScale = ContentScale.FillBounds,
                 modifier = Modifier.size(48.dp)
             )
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(14.dp))
 
             Text(
                 text = "뒤로",
