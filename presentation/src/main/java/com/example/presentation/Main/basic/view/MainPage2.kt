@@ -50,7 +50,7 @@ fun MainPage2(
             )
         }
 
-        Spacer(modifier = Modifier.height(18.dp))
+        Spacer(modifier = Modifier.height(26.dp))
 
         Text(
             text = "집에서 편하게\n정확한 자세로!",
@@ -65,7 +65,7 @@ fun MainPage2(
             modifier = Modifier.fillMaxWidth()
         )
 
-        Spacer(modifier = Modifier.height(28.dp))
+        Spacer(modifier = Modifier.height(26.dp))
 
         Box(
             modifier = Modifier
@@ -83,7 +83,7 @@ fun MainPage2(
                         color = Color(0xFF000000),
                     )
                 )
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(24.dp))
                 Column(
                     horizontalAlignment = Alignment.Start,
                     verticalArrangement = Arrangement.spacedBy(4.dp)
@@ -110,7 +110,7 @@ fun MainPage2(
             }
         }
 
-        Spacer(modifier = Modifier.height(30.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         Box(
             modifier = Modifier
@@ -134,21 +134,21 @@ fun MainPage2(
                     )
                 )
 
-                Spacer(modifier = Modifier.width(4.dp))
+                Spacer(modifier = Modifier.width(12.dp))
 
                 Text(
-                    text = "| 어깨 운동",
+                    text = "|  어깨 운동",
                     style = TextStyle(
                         fontSize = 16.sp,
                         fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
-                        fontWeight = FontWeight.W600,
+                        fontWeight = FontWeight(600),
                         color = Color(0xFF7B7B7B),
-                    )
+                        )
                 )
             }
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
 
         Button(
