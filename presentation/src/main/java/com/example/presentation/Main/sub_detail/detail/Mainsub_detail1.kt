@@ -59,7 +59,7 @@ fun Mainsub_detail1(
                     contentScale = ContentScale.FillBounds,
                     modifier = Modifier.size(48.dp)
                 )
-                Spacer(modifier = Modifier.width(8.dp))
+                Spacer(modifier = Modifier.height(14.dp))
 
                 Text(
                     text = "뒤로",
@@ -71,7 +71,7 @@ fun Mainsub_detail1(
                     )
                 )
             }
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(14.dp))
 
             Text(
                 text = "PUSH UP",
@@ -82,7 +82,7 @@ fun Mainsub_detail1(
                     color = Color(0xFF000000),
                 )
             )
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
             Text(
                 text = "운동시 대흉근, 삼두근, 전면/측면삼각근\n복근, 전거근, 광배근 등의 근육군이 쓰인다.",
@@ -106,6 +106,7 @@ fun Mainsub_detail1(
                 )
             }
         }
+        Spacer(modifier = Modifier.height(44.dp))
         Column(
             modifier = Modifier
                 .fillMaxWidth()
