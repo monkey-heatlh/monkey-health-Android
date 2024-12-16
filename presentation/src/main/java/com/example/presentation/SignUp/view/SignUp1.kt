@@ -23,7 +23,7 @@ fun SignUp1(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.White)
             .padding(horizontal = 20.dp, vertical = 24.dp),
