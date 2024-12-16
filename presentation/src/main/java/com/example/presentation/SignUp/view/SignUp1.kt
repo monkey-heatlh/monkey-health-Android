@@ -59,8 +59,12 @@ fun SignUp1() {
                 placeholder = {
                     Text(
                         text = "이메일을 입력해주세요",
-                        color = Color(0xFF999999),
-                        style = TextStyle(fontSize = 14.sp)
+                        style = TextStyle(
+                            fontSize = 16.sp,
+                            fontFamily = FontFamily(Font(R.font.pretendard_regular)),
+                            fontWeight = FontWeight(400),
+                            color = Color(0xFF7D7D7D),
+                            )
                     )
                 },
                 modifier = Modifier
@@ -93,8 +97,10 @@ fun SignUp1() {
                 Text(
                     text = "인증번호 받기",
                     style = TextStyle(
-                        fontSize = 14.sp,
-                        fontWeight = FontWeight.SemiBold
+                        fontSize = 16.sp,
+                        fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                        fontWeight = FontWeight(600),
+                        color = Color(0xFFC5C5C5),
                     )
                 )
             }
