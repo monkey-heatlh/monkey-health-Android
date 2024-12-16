@@ -38,7 +38,7 @@ fun SignUp2() {
             )
         )
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(21.dp))
 
         Text(
             text = "이메일을 입력하여 함께 운동을 해보아요!!",
@@ -50,7 +50,7 @@ fun SignUp2() {
             )
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(20.dp))
 
         Column(modifier = Modifier.fillMaxWidth()) {
             TextField(
@@ -80,7 +80,7 @@ fun SignUp2() {
                 )
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
             Button(
                 onClick = { /* 인증번호 받기 클릭 이벤트 */ },
@@ -93,7 +93,8 @@ fun SignUp2() {
                     containerColor = Color.Transparent,
                     contentColor = Color(0xFF999999)
                 )
-            ) {
+            )
+            {
                 Text(
                     text = "인증번호 받기",
                     style = TextStyle(
