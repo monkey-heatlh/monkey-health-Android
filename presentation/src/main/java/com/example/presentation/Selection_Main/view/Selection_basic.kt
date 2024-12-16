@@ -48,7 +48,7 @@ fun Selection_basic(
                 contentScale = ContentScale.FillBounds,
                 modifier = Modifier.size(48.dp)
             )
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(14.dp))
 
             Text(
                 text = "뒤로",
@@ -60,6 +60,7 @@ fun Selection_basic(
                 )
             )
         }
+        Spacer(modifier = Modifier.height(14.dp))
     }
 }
 @Preview
