@@ -85,7 +85,7 @@ fun Login1(
                     )
             )
         }
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(28.dp))
         Column(
             modifier = Modifier
                 .width(345.dp)
@@ -122,7 +122,7 @@ fun Login1(
                 )
             )
         }
-        Spacer(modifier = Modifier.height(67.dp))
+        Spacer(modifier = Modifier.height(70.dp))
         Button(
             onClick = { /*확인 클릭 이벤트*/ },
             modifier = Modifier
