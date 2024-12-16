@@ -19,9 +19,11 @@ import androidx.compose.ui.unit.sp
 import com.example.presentation.R
 
 @Composable
-fun SignUp2() {
+fun SignUp2(
+    modifier: Modifier = Modifier
+) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.White)
             .padding(horizontal = 20.dp, vertical = 24.dp),
