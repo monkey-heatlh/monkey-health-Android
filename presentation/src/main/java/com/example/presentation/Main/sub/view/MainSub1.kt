@@ -41,7 +41,7 @@ fun MainSub1(
                 contentScale = ContentScale.FillBounds,
                 modifier = Modifier.size(48.dp)
             )
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
             Text(
                 text = "뒤로",
@@ -53,7 +53,7 @@ fun MainSub1(
                 )
             )
         }
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(24.dp))
         Column(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -71,7 +71,7 @@ fun MainSub1(
                 ),
                 modifier = Modifier.padding(bottom = 24.dp)
             )
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(41.dp))
 
             Column(
                 verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -200,7 +200,7 @@ fun MainSub1(
                 }
             }
 
-            Spacer(modifier = Modifier.height(80.dp))
+            Spacer(modifier = Modifier.height(74.dp))
 
             Box(
                 modifier = Modifier
