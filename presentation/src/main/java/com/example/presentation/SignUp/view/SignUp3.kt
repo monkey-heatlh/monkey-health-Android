@@ -151,21 +151,16 @@ fun SignUp3(
             modifier = Modifier
                 .width(345.dp)
                 .height(54.dp)
-                .border(1.dp, Color(0xFF902BE9), RoundedCornerShape(8.dp)),
-            shape = RoundedCornerShape(8.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Transparent,
-                contentColor = Color(0xFF999999)
-            )
+                .background(color = Color(0xFF690ED4), shape = RoundedCornerShape(size = 8.dp))
         ) {
             Text(
-                text = "인증번호 받기",
+                text = "동의하고 시작하기",
                 style = TextStyle(
                     fontSize = 16.sp,
                     fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
                     fontWeight = FontWeight(600),
-                    color = Color(0xFF902BE9),
-                )
+                    color = Color(0xFFC5C5C5),
+                    )
             )
         }
     }
