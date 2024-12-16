@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -62,7 +63,7 @@ fun LoginPage(
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.White
                 ),
-                shape = RoundedCornerShape(50),
+                shape = RoundedCornerShape(size = 12.dp),
                 modifier = Modifier
                     .width(345.dp)
                     .padding(vertical = 8.dp)
@@ -76,6 +77,7 @@ fun LoginPage(
                     )
                 )
             }
+            Spacer(modifier = Modifier.height(12.dp))
             Button(
                 onClick = { /* TODO: 로그인 기능 추가 */ },
                 colors = ButtonDefaults.buttonColors(
