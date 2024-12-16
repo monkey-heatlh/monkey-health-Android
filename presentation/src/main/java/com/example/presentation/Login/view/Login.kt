@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.sp
 import com.example.presentation.R
 
 @Composable
-fun LoginPage(
+fun Login(
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -102,6 +102,6 @@ fun LoginPage(
 
 @Preview
 @Composable
-fun PreviewLoginPage() {
-    LoginPage()
+fun PreviewLogin() {
+    Login()
 }
