@@ -148,7 +148,7 @@ fun SignUp4(
         }
         Spacer(modifier = Modifier.height(24.dp))
         Button(
-            onClick = { /* 인증번호 받기 클릭 이벤트 */ },
+            onClick = { /* 동의하고 시작하기 클릭 이벤트 */ },
             modifier = Modifier
                 .width(345.dp)
                 .height(54.dp),
