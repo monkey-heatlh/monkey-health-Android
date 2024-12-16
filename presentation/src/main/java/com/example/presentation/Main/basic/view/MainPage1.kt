@@ -54,7 +54,7 @@ fun MainPage1(
             )
         }
 
-        Spacer(modifier = Modifier.height(18.dp))
+        Spacer(modifier = Modifier.height(26.dp))
 
         Text(
             text = "집에서 편하게\n정확한 자세로!",
@@ -69,7 +69,7 @@ fun MainPage1(
             modifier = Modifier.fillMaxWidth()
         )
 
-        Spacer(modifier = Modifier.height(28.dp))
+        Spacer(modifier = Modifier.height(26.dp))
 
         Box(
             modifier = Modifier
@@ -115,7 +115,7 @@ fun MainPage1(
             }
         }
 
-        Spacer(modifier = Modifier.height(30.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         Button(
             onClick = { /* TODO: 루틴 설정하기 클릭 */ },
@@ -132,7 +132,7 @@ fun MainPage1(
             )
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         Button(
             onClick = { /* TODO: 맨몸운동 하러가기 클릭 */ },
