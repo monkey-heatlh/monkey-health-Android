@@ -60,7 +60,7 @@ fun Mainsub_detail2(
                     contentScale = ContentScale.FillBounds,
                     modifier = Modifier.size(48.dp)
                 )
-                Spacer(modifier = Modifier.width(8.dp))
+                Spacer(modifier = Modifier.height(14.dp))
 
                 Text(
                     text = "뒤로",
@@ -72,7 +72,7 @@ fun Mainsub_detail2(
                     )
                 )
             }
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(14.dp))
 
             Text(
                 text = "FLANK",
@@ -83,7 +83,7 @@ fun Mainsub_detail2(
                     color = Color(0xFF000000),
                 )
             )
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
             Text(
                 text = "등척성 코어 근육 운동으로 근지구렬 향상에 도움을 주며\n" +
@@ -96,7 +96,7 @@ fun Mainsub_detail2(
                     color = Color(0xFF000000),
                 )
             )
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
             Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                 Image(
@@ -109,6 +109,8 @@ fun Mainsub_detail2(
                 )
             }
         }
+        Spacer(modifier = Modifier.height(42.dp))
+
         Column(
             modifier = Modifier
                 .fillMaxWidth()
