@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.sp
 import com.example.presentation.R
 
 @Composable
-fun SignUp6(
+fun SignUp7(
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -44,7 +44,7 @@ fun SignUp6(
                 fontSize = 24.sp,
                 fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
                 fontWeight = FontWeight(600),
-                color = Color(0xFF000000),
+                color = Color(0xFF902BE9),
             )
         )
         Spacer(modifier = Modifier.height(22.dp))
@@ -100,7 +100,7 @@ fun SignUp6(
                     fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
                     fontWeight = FontWeight(400),
                     color = Color(0xFF111111),
-                    )
+                )
             )
         }
         Spacer(modifier = Modifier.height(32.dp))
@@ -123,13 +123,13 @@ fun SignUp6(
             modifier = Modifier
                 .border(
                     width = 1.dp,
-                    color = Color(0xFFFF3434),
+                    color = Color(0xFF902BE9),
                     shape = RoundedCornerShape(size = 8.dp)
                 )
                 .width(345.dp)
                 .height(51.dp)
                 .padding(start = 20.dp, top = 16.dp, end = 20.dp, bottom = 16.dp)
-        ){
+        ) {
             Text(
                 text = "●●●●●●●",
                 style = TextStyle(
@@ -138,22 +138,7 @@ fun SignUp6(
                     fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
                     fontWeight = FontWeight(400),
                     color = Color(0xFF111111),
-                    )
-            )
-        }
-        Column (
-            Modifier
-                .width(116.dp)
-                .height(17.dp)
-        ){
-            Text(
-                text = "비밀번호가 다릅니다.",
-                style = TextStyle(
-                    fontSize = 14.sp,
-                    fontFamily = FontFamily(Font(R.font.pretendard_regular)),
-                    fontWeight = FontWeight(400),
-                    color = Color(0xFFFF3434),
-                    )
+                )
             )
         }
 
@@ -164,7 +149,7 @@ fun SignUp6(
                 .width(345.dp)
                 .height(54.dp),
             shape = RoundedCornerShape(size = 8.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF690ED4))
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF902BE9))
         ) {
             Text(
                 text = "확인",
@@ -181,6 +166,6 @@ fun SignUp6(
 
 @Preview
 @Composable
-fun PreviewSignUp6() {
-    SignUp6()
+fun PreviewSignUp7() {
+    SignUp7()
 }

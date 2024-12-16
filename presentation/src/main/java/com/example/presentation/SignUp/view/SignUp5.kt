@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -138,8 +139,24 @@ fun SignUp5(
                     )
             )
         }
-        Button(onClick = { /*TODO*/ }) {
-            
+        Spacer(modifier = Modifier.height(67.dp))
+        Button(
+            onClick = { /*확인 클릭 이벤트*/ },
+            modifier = Modifier
+                .width(345.dp)
+                .height(54.dp),
+            shape = RoundedCornerShape(size = 8.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF690ED4))
+        ) {
+            Text(
+                text = "확인",
+                style = TextStyle(
+                    fontSize = 16.sp,
+                    fontFamily = FontFamily(Font(R.font.pretendard_regular)),
+                    fontWeight = FontWeight(500),
+                    color = Color.White
+                )
+            )
         }
     }
 }
