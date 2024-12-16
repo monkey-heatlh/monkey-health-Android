@@ -19,7 +19,9 @@ import androidx.compose.ui.unit.sp
 import com.example.presentation.R
 
 @Composable
-fun SignUp1() {
+fun SignUp1(
+    modifier: Modifier = Modifier
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -38,7 +40,7 @@ fun SignUp1() {
             )
         )
 
-        Spacer(modifier = Modifier.height(21.dp))
+        Spacer(modifier = modifier.height(21.dp))
 
         Text(
             text = "이메일을 입력하여 함께 운동을 해보아요!!",
