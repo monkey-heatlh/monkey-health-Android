@@ -70,8 +70,8 @@ fun SignUp3(
                     )
                 },
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .height(50.dp)
+                    .width(345.dp)
+                    .height(51.dp)
                     .border(1.dp, Color(0xFF902BE9), RoundedCornerShape(8.dp))
                     .background(Color.White),
                 colors = TextFieldDefaults.colors(
@@ -87,8 +87,8 @@ fun SignUp3(
             Button(
                 onClick = { /* 인증번호 받기 클릭 이벤트 */ },
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .height(50.dp)
+                    .width(345.dp)
+                    .height(51.dp)
                     .border(1.dp, Color(0xFF902BE9), RoundedCornerShape(8.dp)),
                 shape = RoundedCornerShape(8.dp),
                 colors = ButtonDefaults.buttonColors(
@@ -123,8 +123,8 @@ fun SignUp3(
                         )
                     },
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .height(50.dp)
+                        .width(345.dp)
+                        .height(51.dp)
                         .border(1.dp, Color(0xFFA6A6A6), RoundedCornerShape(8.dp))
                         .background(Color.White),
                     colors = TextFieldDefaults.colors(
@@ -146,6 +146,28 @@ fun SignUp3(
             )
         }
         Spacer(modifier = Modifier.height(24.dp))
+        Button(
+            onClick = { /* 인증번호 받기 클릭 이벤트 */ },
+            modifier = Modifier
+                .width(345.dp)
+                .height(54.dp)
+                .border(1.dp, Color(0xFF902BE9), RoundedCornerShape(8.dp)),
+            shape = RoundedCornerShape(8.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color.Transparent,
+                contentColor = Color(0xFF999999)
+            )
+        ) {
+            Text(
+                text = "인증번호 받기",
+                style = TextStyle(
+                    fontSize = 16.sp,
+                    fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                    fontWeight = FontWeight(600),
+                    color = Color(0xFF902BE9),
+                )
+            )
+        }
     }
 }
 
