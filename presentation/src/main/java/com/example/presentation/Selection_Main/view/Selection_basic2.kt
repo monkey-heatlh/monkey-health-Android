@@ -24,9 +24,11 @@ import androidx.compose.ui.unit.sp
 import com.example.presentation.R
 
 @Composable
-fun Selcection_basic2() {
+fun Selcection_basic2(
+    modifier: Modifier = Modifier
+) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.White)
             .padding(horizontal = 24.dp, vertical = 62.5.dp),
