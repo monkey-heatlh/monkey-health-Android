@@ -1,7 +1,9 @@
 package com.example.presentation.Selection_Main.view
 
+import androidx.collection.floatSetOf
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -13,6 +15,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -47,7 +51,7 @@ fun FullScreenUI() {
                 color = Color.Black
             )
         }
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(34.dp))
 
         Surface(
             modifier = Modifier
@@ -90,9 +94,8 @@ fun FullScreenUI() {
             }
         }
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
-        // 캘린더와 루틴 버튼
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier.fillMaxWidth()
@@ -131,7 +134,7 @@ fun FullScreenUI() {
                 }
             }
         }
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(36.dp))
 
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -152,42 +155,66 @@ fun FullScreenUI() {
             }
             Switch(checked = true, onCheckedChange = {})
         }
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(24.dp))
+        Column (
+            modifier = Modifier
+                .border(width = 1.dp, color = Color(0xFFC4C4C4))
+                .padding(1.dp)
+                .width(345.dp)
+                .height(0.dp)
+        ){
+            Image(
+                painter = painterResource(id = R.drawable.vector2),
+                contentDescription = "image description",
+                contentScale = ContentScale.None
+            )
+        }
+        Spacer(modifier = Modifier.height(48.dp))
 
         Button(
-            onClick = { /* 로그아웃 로직 */ },
+            onClick = { /* 로그아웃 버튼 클릭 이벤트 */ },
             modifier = Modifier
-                .fillMaxWidth()
-                .height(48.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8B5CF6)),
-            shape = RoundedCornerShape(12.dp),
-            contentPadding = PaddingValues(0.dp)
+                .border(
+                    width = 1.dp,
+                    color = Color(0xFF902BE9),
+                    shape = RoundedCornerShape(size = 12.dp)
+                )
+                .width(345.dp)
+                .height(51.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color.Transparent
+            )
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Spacer(modifier = Modifier.weight(1f))
                 Image(
                     painter = painterResource(id = R.drawable.ic_outline_log_out),
                     contentDescription = "로그아웃",
                     modifier = Modifier.size(24.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
-                Text("로그아웃", fontSize = 16.sp, color = Color.White)
-                Spacer(modifier = Modifier.weight(1f))
-
+                Text(
+                    text = "로그아웃",
+                    style = TextStyle(
+                        fontSize = 16.sp,
+                        fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                        fontWeight = FontWeight(600),
+                        color = Color(0xFF902BE9),
+                    )
+                )
             }
         }
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(9.dp))
 
         Box(
             modifier = Modifier
-                .fillMaxWidth()
-                .height(48.dp)
-                .background(Color(0xFF8B5CF6), RoundedCornerShape(12.dp)),
-            contentAlignment = Alignment.Center
+                .width(345.dp)
+                .height(51.dp)
+                .background(color = Color(0xFF902BE9), shape = RoundedCornerShape(size = 12.dp))
+                .padding(start = 24.dp, top = 16.dp, end = 24.dp, bottom = 16.dp)
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -203,8 +230,12 @@ fun FullScreenUI() {
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = "Monkey Health 정보",
-                    color = Color.White,
-                    fontSize = 16.sp
+                    style = TextStyle(
+                        fontSize = 16.sp,
+                        fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                        fontWeight = FontWeight(600),
+                        color = Color(0xFFFFFFFF),
+                        )
                 )
                 Spacer(modifier = Modifier.weight(1f))
             }
