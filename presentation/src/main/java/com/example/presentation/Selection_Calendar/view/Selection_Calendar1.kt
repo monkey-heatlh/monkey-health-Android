@@ -144,68 +144,6 @@ fun Selection_Calendar1(
             )
         }
     }
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(color = Color(0x33111111)),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Column(
-            modifier = Modifier
-                .width(345.dp)
-                .height(232.dp)
-                .background(color = Color.White, shape = RoundedCornerShape(20.dp)),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
-        ) {
-            Column (
-                modifier = Modifier
-                    .border(width = 1.dp, color = Color(0xFFA6A6A6), shape = RoundedCornerShape(size = 8.dp))
-                    .width(307.dp)
-                    .height(55.dp)
-            ){
-                Text(
-                    text = "무슨 메모를 작성하실건가요?",
-                    fontSize = 16.sp,
-                    color = Color.Gray,
-                    modifier = Modifier.padding(16.dp)
-                )
-            }
-
-            Spacer(modifier = Modifier.height(32.dp))
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                OutlinedButton(
-                    onClick = { /* 뒤로가기 클릭 이벤트 */ },
-                    modifier = Modifier
-                        .weight(1f)
-                        .padding(end = 8.dp),
-                    shape = RoundedCornerShape(8.dp),
-                    border = BorderStroke(1.dp, Color(0xFF9C27B0)),
-                    colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF9C27B0))
-                ) {
-                    Text("뒤로", color = Color(0xFF9C27B0))
-                }
-
-                Button(
-                    onClick = { /* 확인 클릭 이벤트 */ },
-                    modifier = Modifier
-                        .weight(1f)
-                        .padding(start = 8.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF902BE9)),
-                    shape = RoundedCornerShape(8.dp)
-                ) {
-                    Text("확인", color = Color.White)
-                }
-            }
-        }
-    }
 }
 @Preview
 @Composable
