@@ -1,6 +1,5 @@
 package com.example.presentation.Selection_Main.view
 
-import androidx.collection.floatSetOf
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -25,7 +24,7 @@ import androidx.compose.ui.unit.sp
 import com.example.presentation.R
 
 @Composable
-fun FullScreenUI() {
+fun Selection_basic() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -264,5 +263,5 @@ fun FullScreenUI() {
 @Preview
 @Composable
 fun PreviewSelection_basic() {
-    FullScreenUI()
+    Selection_basic()
 }
