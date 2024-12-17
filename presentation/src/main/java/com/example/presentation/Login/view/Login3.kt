@@ -89,9 +89,9 @@ fun Login3(
         }
         Column(
             modifier = Modifier
-                .fillMaxWidth() // Column을 부모의 너비에 맞춤
+                .fillMaxWidth()
                 .height(17.dp),
-            horizontalAlignment = Alignment.End // 텍스트를 오른쪽 정렬
+            horizontalAlignment = Alignment.End
         ) {
             Text(
                 text = "잘못된 이메일 형식입니다.",
@@ -143,9 +143,9 @@ fun Login3(
         }
         Column(
             modifier = Modifier
-                .fillMaxWidth() // Column을 부모의 너비에 맞춤
+                .fillMaxWidth()
                 .height(17.dp),
-            horizontalAlignment = Alignment.End // 텍스트를 오른쪽 정렬
+            horizontalAlignment = Alignment.End
         ) {
             Text(
                 text = "잘못된 이메일 형식입니다.",
