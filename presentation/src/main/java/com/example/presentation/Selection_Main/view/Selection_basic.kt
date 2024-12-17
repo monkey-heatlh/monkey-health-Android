@@ -47,7 +47,6 @@ fun FullScreenUI() {
                 color = Color.Black
             )
         }
-
         Spacer(modifier = Modifier.height(32.dp))
 
         Surface(
@@ -93,6 +92,7 @@ fun FullScreenUI() {
 
         Spacer(modifier = Modifier.height(32.dp))
 
+        // 캘린더와 루틴 버튼
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier.fillMaxWidth()
@@ -131,7 +131,6 @@ fun FullScreenUI() {
                 }
             }
         }
-
         Spacer(modifier = Modifier.height(32.dp))
 
         Row(
@@ -153,7 +152,6 @@ fun FullScreenUI() {
             }
             Switch(checked = true, onCheckedChange = {})
         }
-
         Spacer(modifier = Modifier.height(32.dp))
 
         Button(
@@ -162,11 +160,26 @@ fun FullScreenUI() {
                 .fillMaxWidth()
                 .height(48.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8B5CF6)),
-            shape = RoundedCornerShape(12.dp)
+            shape = RoundedCornerShape(12.dp),
+            contentPadding = PaddingValues(0.dp)
         ) {
-            Text("로그아웃", fontSize = 16.sp, color = Color.White)
-        }
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Spacer(modifier = Modifier.weight(1f))
+                Image(
+                    painter = painterResource(id = R.drawable.ic_outline_log_out),
+                    contentDescription = "로그아웃",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text("로그아웃", fontSize = 16.sp, color = Color.White)
+                Spacer(modifier = Modifier.weight(1f))
 
+            }
+        }
         Spacer(modifier = Modifier.height(16.dp))
 
         Box(
@@ -176,11 +189,25 @@ fun FullScreenUI() {
                 .background(Color(0xFF8B5CF6), RoundedCornerShape(12.dp)),
             contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = "Monkey Health 정보",
-                color = Color.White,
-                fontSize = 16.sp
-            )
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Spacer(modifier = Modifier.weight(1f))
+                Image(
+                    painter = painterResource(id = R.drawable.mdi_information_outline),
+                    contentDescription = "Monkey Health",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = "Monkey Health 정보",
+                    color = Color.White,
+                    fontSize = 16.sp
+                )
+                Spacer(modifier = Modifier.weight(1f))
+            }
         }
     }
 }
