@@ -76,7 +76,7 @@ fun Selection_basic() {
                 Spacer(modifier = Modifier.width(16.dp))
                 Column {
                     Text(
-                        text = "하창혁",
+                        text = "모태환",
                         style = TextStyle(
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,
