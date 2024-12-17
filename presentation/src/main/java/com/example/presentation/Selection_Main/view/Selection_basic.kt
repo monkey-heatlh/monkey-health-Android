@@ -30,7 +30,7 @@ fun FullScreenUI() {
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
-            .padding(horizontal = 24.dp, vertical = 32.dp),
+            .padding(horizontal = 24.dp, vertical = 62.5.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start
     ) {
