@@ -18,6 +18,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -113,7 +114,15 @@ fun FullScreenUI() {
                         tint = Color.Black,
                         modifier = Modifier.size(40.dp)
                     )
-                    Text("캘린더", fontSize = 16.sp, color = Color.Black)
+                    Text(
+                        text = "캘린더",
+                        style = TextStyle(
+                            fontSize = 22.sp,
+                            fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                            fontWeight = FontWeight(500),
+                            color = Color(0xFF000000),
+                            )
+                    )
                 }
             }
 
@@ -130,7 +139,16 @@ fun FullScreenUI() {
                         tint = Color.Black,
                         modifier = Modifier.size(40.dp)
                     )
-                    Text("루틴", fontSize = 16.sp, color = Color.Black)
+                    Text(
+                        text = "루틴",
+                        style = TextStyle(
+                            fontSize = 22.sp,
+                            fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                            fontWeight = FontWeight(500),
+                            color = Color(0xFF000000),
+                            textAlign = TextAlign.Center,
+                        )
+                    )
                 }
             }
         }
