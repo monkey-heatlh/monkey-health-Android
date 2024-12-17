@@ -1,11 +1,11 @@
 package com.example.presentation.Selection_Calendar
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.lazy.grid.*
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.*
@@ -31,7 +31,7 @@ fun Selection_Calendar(
 ) {
     val days = (1..31).toList()
     val weeks = listOf("MON", "TUE", "WED", "THS", "FRI", "SAT", "SUN")
-    val selectedDay = remember { mutableStateOf(14) } // 예제: 14일 선택
+    val selectedDay = remember { mutableStateOf(14) }
 
     Column(
         modifier = modifier
@@ -68,82 +68,82 @@ fun Selection_Calendar(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-            text = "10월",
-            style = TextStyle(
-                fontSize = 32.sp,
-                fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
-                fontWeight = FontWeight(700),
-                color = Color(0xFF111111),
-                textAlign = TextAlign.Center,
+                text = "10월",
+                style = TextStyle(
+                    fontSize = 32.sp,
+                    fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                    fontWeight = FontWeight(700),
+                    color = Color(0xFF111111),
+                    textAlign = TextAlign.Center,
+                )
             )
-        )
         }
 
-            Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(16.dp))
 
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceAround
-            ) {
-                weeks.forEach {
-                    Text(
-                        text = it,
-                        fontSize = 14.sp,
-                        color = Color.Gray
-                    )
-                }
-            }
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            LazyVerticalGrid(
-                columns = GridCells.Fixed(7),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                items(days) { day ->
-                    Box(
-                        contentAlignment = Alignment.Center,
-                        modifier = Modifier
-                            .padding(4.dp)
-                            .size(40.dp)
-                            .clip(CircleShape)
-                            .background(
-                                if (day == selectedDay.value) Color.White else Color(0xFF9C27B0)
-                            )
-                            .border(
-                                width = if (day == selectedDay.value) 2.dp else 0.dp,
-                                color = Color(0xFF9C27B0),
-                                shape = CircleShape
-                            )
-                    ) {
-                        Text(
-                            text = day.toString(),
-                            color = if (day == selectedDay.value) Color.Black else Color.White,
-                            fontSize = 14.sp
-                        )
-                    }
-                }
-            }
-
-            Spacer(modifier = Modifier.height(24.dp))
-
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(48.dp)
-                    .clip(MaterialTheme.shapes.medium)
-                    .border(1.dp, Color(0xFF9C27B0))
-                    .padding(8.dp),
-                contentAlignment = Alignment.Center
-            ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceAround
+        ) {
+            weeks.forEach {
                 Text(
-                    text = "+",
-                    color = Color(0xFF9C27B0),
-                    fontSize = 20.sp
+                    text = it,
+                    fontSize = 14.sp,
+                    color = Color.Black
                 )
             }
         }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(7),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            items(days) { day ->
+                Box(
+                    contentAlignment = Alignment.Center,
+                    modifier = Modifier
+                        .padding(4.dp)
+                        .size(40.dp)
+                        .clip(CircleShape)
+                        .background(
+                            if (day == selectedDay.value) Color.White else Color(0xFF902BE9)
+                        )
+                        .border(
+                            width = if (day == selectedDay.value) 2.dp else 0.dp,
+                            color = Color(0xFF9C27B0),
+                            shape = CircleShape
+                        )
+                ) {
+                    Text(
+                        text = day.toString(),
+                        color = if (day == selectedDay.value) Color.Black else Color.White,
+                        fontSize = 14.sp
+                    )
+                }
+            }
+        }
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        OutlinedButton(
+            onClick = { /* 여기에 클릭 이벤트 추가 */ },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(48.dp),
+            shape = MaterialTheme.shapes.medium, // 테두리 모양 지정
+            border = BorderStroke(1.dp, Color(0xFF9C27B0)), // 테두리 색상
+            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF9C27B0)) // 텍스트 색상
+        ) {
+            Text(
+                text = "+",
+                color = Color(0xFF9C27B0),
+                fontSize = 20.sp
+            )
+        }
     }
+}
 @Preview
 @Composable
 fun PreviewSelection_Calendar() {
