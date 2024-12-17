@@ -1,4 +1,4 @@
-package com.example.presentation.Selection_Calendar
+package com.example.presentation.Selection_Calendar.view
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -26,7 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import com.example.presentation.R
 
 @Composable
-fun Selection_Calendar(
+fun Selection_Calendar1(
     modifier: Modifier = Modifier
 ) {
     val days = (1..31).toList()
@@ -146,6 +146,6 @@ fun Selection_Calendar(
 }
 @Preview
 @Composable
-fun PreviewSelection_Calendar() {
-    Selection_Calendar()
+fun PreviewSelection_Calendar1() {
+    Selection_Calendar1()
 }
