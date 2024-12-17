@@ -132,9 +132,9 @@ fun Selection_Calendar(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp),
-            shape = MaterialTheme.shapes.medium, // 테두리 모양 지정
-            border = BorderStroke(1.dp, Color(0xFF9C27B0)), // 테두리 색상
-            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF9C27B0)) // 텍스트 색상
+            shape = MaterialTheme.shapes.medium,
+            border = BorderStroke(1.dp, Color(0xFF9C27B0)),
+            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF9C27B0))
         ) {
             Text(
                 text = "+",
