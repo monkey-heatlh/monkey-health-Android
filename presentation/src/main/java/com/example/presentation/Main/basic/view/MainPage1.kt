@@ -88,7 +88,20 @@ fun MainPage1(
                     },
                     fontSize = 16.sp
                 )
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(20.dp))
+                Column (
+                    modifier = Modifier
+                        .border(width = 0.5.dp, color = Color(0xFFC4C4C4))
+                        .padding(0.5.dp)
+                        .width(321.dp)
+                        .height(0.dp)
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.vector2),
+                        contentDescription = "image description",
+                    )
+                }
+                Spacer(modifier = Modifier.height(20.dp))
                 Column(
                     horizontalAlignment = Alignment.Start,
                     verticalArrangement = Arrangement.spacedBy(4.dp)
