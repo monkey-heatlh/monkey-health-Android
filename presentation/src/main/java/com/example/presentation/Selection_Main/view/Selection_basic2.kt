@@ -31,7 +31,7 @@ fun Selcection_basic2(
         modifier = modifier
             .fillMaxSize()
             .background(Color.White)
-            .padding(horizontal = 24.dp, vertical = 62.5.dp),
+            .padding(horizontal = 24.dp, vertical = 66.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start
     ) {
