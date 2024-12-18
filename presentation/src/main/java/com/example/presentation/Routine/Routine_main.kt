@@ -53,21 +53,59 @@ fun Routine_main(
                 color = Color.Black
             )
         }
-    }
-    Spacer(modifier = Modifier.height(180.dp))
-    Column (
-        modifier = Modifier
-            .padding(1.dp)
-            .width(164.dp)
-            .height(164.dp)
-    ){
-        Image(
-            painter = painterResource(id = R.drawable.circle_ok),
-            contentDescription = "image description",
-            contentScale = ContentScale.None
-        )
+        Spacer(modifier = Modifier.height(180.dp))
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally, // 수평 중앙 정렬
+        ){
+            Column(
+                modifier = Modifier
+                    .width(224.dp)
+                    .height(266.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.circle_ok),
+                    contentDescription = "image description",
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier
+                        .size(164.dp)
+                )
+                Spacer(modifier = Modifier.height(36.dp))
+                Text(
+                    text = "오늘은 월요일\n어깨하는 날 입니다!!",
+                    style = TextStyle(
+                        fontSize = 28.sp,
+                        fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                        fontWeight = FontWeight(600),
+                        color = Color(0xFF000000),
+                        textAlign = TextAlign.Center,
+                    )
+                )
+
+            }
+            Spacer(modifier = Modifier.height(149.dp))
+            Button(
+                onClick = { /*TODO*/ },
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF902BE9)),
+                modifier = Modifier
+                    .width(345.dp)
+                    .height(51.dp)
+            ) {
+                Text(
+                    text = "루틴 재설정",
+                    style = TextStyle(
+                        fontSize = 16.sp,
+                        fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
+                        fontWeight = FontWeight(600),
+                        color = Color(0xFFFFFFFF),
+                        )
+                )
+            }
+        }
     }
 }
+
 
 @Preview
 @Composable
