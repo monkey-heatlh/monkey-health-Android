@@ -53,7 +53,7 @@ fun Routine_selection(
         Spacer(modifier = Modifier.height(180.dp))
         Column(
             modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally,
+            horizontalAlignment = Alignment.CenterHorizontally, // 수평 중앙 정렬
         ){
             Column(
                 modifier = Modifier

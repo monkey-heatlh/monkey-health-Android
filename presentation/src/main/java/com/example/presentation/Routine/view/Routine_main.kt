@@ -25,7 +25,7 @@ fun Routine_main(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.White)
             .padding(horizontal = 24.dp, vertical = 66.dp),
