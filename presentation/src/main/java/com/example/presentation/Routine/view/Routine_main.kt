@@ -2,10 +2,7 @@ package com.example.presentation.Selection_Main.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,11 +21,11 @@ import androidx.compose.ui.unit.sp
 import com.example.presentation.R
 
 @Composable
-fun Routine_selection(
+fun Routine_main(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier
+        modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
             .padding(horizontal = 24.dp, vertical = 66.dp),
@@ -56,7 +53,7 @@ fun Routine_selection(
         Spacer(modifier = Modifier.height(180.dp))
         Column(
             modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally,
+            horizontalAlignment = Alignment.CenterHorizontally, // 수평 중앙 정렬
         ){
             Column(
                 modifier = Modifier
@@ -99,7 +96,7 @@ fun Routine_selection(
                         fontFamily = FontFamily(Font(R.font.pretendard_semibold)),
                         fontWeight = FontWeight(600),
                         color = Color(0xFFFFFFFF),
-                    )
+                        )
                 )
             }
         }
@@ -109,6 +106,6 @@ fun Routine_selection(
 
 @Preview
 @Composable
-fun PreviewRoutine_selection(){
-    Routine_selection()
+fun PreviewRoutine_main(){
+    Routine_main()
 }
