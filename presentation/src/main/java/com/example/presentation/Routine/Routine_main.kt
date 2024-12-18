@@ -54,6 +54,19 @@ fun Routine_main(
             )
         }
     }
+    Spacer(modifier = Modifier.height(180.dp))
+    Column (
+        modifier = Modifier
+            .padding(1.dp)
+            .width(164.dp)
+            .height(164.dp)
+    ){
+        Image(
+            painter = painterResource(id = R.drawable.circle_ok),
+            contentDescription = "image description",
+            contentScale = ContentScale.None
+        )
+    }
 }
 
 @Preview
