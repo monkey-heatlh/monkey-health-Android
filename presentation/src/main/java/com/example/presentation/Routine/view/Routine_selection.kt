@@ -48,11 +48,10 @@ fun Routine_selection(
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Medium,
                 color = Color.Black
-                )
-            }
+            )
         }
     }
-
+}
 
 @Preview
 @Composable
