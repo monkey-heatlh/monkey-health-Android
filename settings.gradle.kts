@@ -23,3 +23,4 @@ rootProject.name = "IdeaFestival"
 include(":app")
 include(":presentation")
 include(":bhildSrc")
+include(":domain")
